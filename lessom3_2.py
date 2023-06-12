@@ -7,6 +7,6 @@ class Window(tk.Tk):
         self.geometry('380X400')
         self.resizable(False,False)
 
-if __name__=="__main__":
-    window=Window()
+if __name__ == "__main__":
+    window = Window()
     window.mainloop()
