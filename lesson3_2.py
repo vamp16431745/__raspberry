@@ -10,7 +10,7 @@ class Window(tk.Tk):
 
         '''
         super().__init__()
-        self.led = redLed
+        self.redLed = redLed
         self.state = False
         self.title('嘿嘿嘿 我是一個LED開關')
         self.resizable(False, False)
