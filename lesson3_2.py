@@ -12,7 +12,7 @@ class Window(tk.Tk):
         s = ttk.Style()
         s.theme_use('clam')
         s.configure('Title.TLabel',font=('Arial',20))
-        s.configure('LEDClose.TButton',                    
+        s.configure('LEDClose.TButton',   background='red',                 
                     font=('Arial',20),
                     borderwidth=5,
                     padding=(10,20),
