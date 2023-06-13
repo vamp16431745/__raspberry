@@ -9,7 +9,7 @@ class Window(tk.Tk):
         s = ttk.Style()
         print(s.theme_names())
         print(s.theme_use())
-        s.theme_use('clam')
+        s.theme_use('alt')
         title_label = ttk.Label(self,text="LED控制器",font=('Helvetica', '16'))
         title_label.pack(pady=25,padx=100)
 
