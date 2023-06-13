@@ -18,7 +18,7 @@ class Window(tk.Tk):
                     padding=(10,20),
                     )
         s.configure('LEDOpen.TButton',
-                    background='yellow',                    
+                    background='blue',                    
                     font=('Arial',20),
                     borderwidth=5,
                     padding=(10,20),
