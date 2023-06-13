@@ -16,9 +16,11 @@ class Window(tk.Tk):
         print(title_label.winfo_class())
         title_label.pack(pady=25,padx=100)
 
-        led_btn = ttk.Button(self,text="LED 開",style='Led.TButton')
+        led_btn = ttk.Button(self,text="LED 開",style='Led.TButton',command=self.user_click)
         led_btn.pack(pady=(10,50))
         
+    def user_click(self):
+        print('user click')
         
 
 if __name__ == "__main__":
