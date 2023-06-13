@@ -4,8 +4,13 @@ from gpiozero import LED
 #import pprint
 
 class Window(tk.Tk):    
-    def __init__(self):
+    def __init__(self,redLed):
+        '''
+        @parameter 是redLed是gpiozero.Led的實體
+
+        '''
         super().__init__()
+        self.led = redLed
         self.state = False
         self.title('嘿嘿嘿 我是一個LED開關')
         self.resizable(False, False)
@@ -36,14 +41,14 @@ class Window(tk.Tk):
         if self.state:
             self.led_btn.configure(text='LED 關')
             self.led_btn.configure(style='LEDOpen.TButton')
-            led.on()
+            self.redLed.on()
         else:
             self.led_btn.configure(text='LED 開')
             self.led_btn.configure(style='LEDClose.TButton')
-            led.off()
+            self.redLed.off()
 
 if __name__ == "__main__":
     led = LED(23)
     led.off()
-    window = Window()   
+    window = Window(led)   
     window.mainloop()
