@@ -11,13 +11,16 @@ class Window(tk.Tk):
         print(s.theme_use())
         s.theme_use('classic')
         s.configure('Title.TLabel',foreground='red',background='blue')
-        s.configure('Led.TButton',foreground='red',background='blue')
+        s.configure('Led.TButton',foreground='red',background='blue',borderwidth=5,padding=(10,20))
         title_label = ttk.Label(self,text="LED控制器",style='Title.TLabel',font=('Helvetica', '16'))
         print(title_label.winfo_class())
         title_label.pack(pady=25,padx=100)
 
         led_btn = ttk.Button(self,text="LED 開",style='Led.TButton',command=self.user_click)
         led_btn.pack(pady=(10,50))
+        
+
+
         
     def user_click(self):
         print('user click')
