@@ -7,7 +7,7 @@ class Window(tk.Tk):
     def __init__(self):
         super().__init__()
         self.state = False
-        self.title('這是我的第一個視窗')
+        self.title('嘿嘿嘿 我是一個LED開關')
         self.resizable(False, False)
         s = ttk.Style()
         s.theme_use('clam')
