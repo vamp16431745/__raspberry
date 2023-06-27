@@ -17,7 +17,7 @@ if __name__ == "__main__":
             else:
                 print("光線暗") 
 
-            response = requests.get(f'https://vamp16431745-laughing-winner-6pw4jvx5vvg359r7-8000.preview.app.github.dev/raspberry?light={value}&temperature={mcp3008_ch6.value}')
+            response = requests.get(f'https://vamp16431745-ubiquitous-telegram-7xwpg7j5r44cp5p4-8000.preview.app.github.dev/raspberry?light={value}&temperature={mcp3008_ch6.value}')
             
             if response.ok:
                 print("上傳資料成功")
