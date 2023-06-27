@@ -1,6 +1,7 @@
 import gpiozero as zero
 import RPi.GPIO as GPIO
 from time import sleep
+from datetime import datetime
 import requests
 
 
@@ -17,7 +18,9 @@ if __name__ == "__main__":
             else:
                 print("Light_out") 
 
-            response = requests.get(f'https://vamp16431745-ubiquitous-telegram-7xwpg7j5r44cp5p4-8000.preview.app.github.dev/raspberry?light={value}&temperature={mcp3008_ch6.value}')
+            datetimeStr = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+            response = requests.get(f'https://vamp16431745-ubiquitous-telegram-7xwpg7j5r44cp5p4-8000.preview.app.github.dev/raspberry?time={ datetimeStr}&light={value}&temperature={mcp3008_ch6.value}')
             
             if response.ok:
                 print("file_upload")
