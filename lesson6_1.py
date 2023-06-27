@@ -1,6 +1,9 @@
 import gpiozero as zero
 import RPi.GPIO as GPIO
 from time import sleep
+import requests
+
+
 
 
 
@@ -18,8 +21,10 @@ if __name__ == "__main__":
                  print("光線暗")
 
                  print("LM35: ",mcp3008_ch6.value*100*3.3)
+
+                 requests.get(f'https://vamp16431745-laughing-winner-6pw4jvx5vvg359r7-8000.preview.app.github.dev/raspberry?light={value}&temperature={mcp3008_ch6.value*100*3.3}')
                      
-             sleep(1)
+             sleep(5)
     except KeyboardInterrupt:
         GPIO.cleanup()
         print("程式退函數")    
