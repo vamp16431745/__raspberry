@@ -17,7 +17,7 @@ if __name__ == "__main__":
              else:
                  print("光線暗")
 
-                 print("LM35: ",mcp3008_ch6.value)
+                 print("LM35: ",mcp3008_ch6.value*100*3.3)
                      
              sleep(1)
     except KeyboardInterrupt:
