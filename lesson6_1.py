@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
             datetimeStr = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-            response = requests.get(f'https://vamp16431745-ubiquitous-telegram-7xwpg7j5r44cp5p4-8000.preview.app.github.dev/raspberry?time={ datetimeStr}&light={value}&temperature={mcp3008_ch6.value}')
+            response = requests.get(f'https://vamp16431745-animated-space-orbit-rxwpj756r9935jjx-8000.preview.app.github.dev/raspberry?time={ datetimeStr}&light={value}&temperature={mcp3008_ch6.value}')
             
             if response.ok:
                 print("file_upload")
